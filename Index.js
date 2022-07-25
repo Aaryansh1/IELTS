@@ -1,29 +1,22 @@
-const express = require('express');
+const express = require("express");
 const app = express();
-const http = require('http');
-const {Server} = require('socket.io');
-const cors = require('cors');
+const cors = require("cors");
+const cookieParser =  require("cookie-parser");
 
-app.use(cors());
+app.use(express.json());
+app.use(cookieParser());
+app.use(cors({credentials:true,origin:'http://localhost:3000'}));
 
-const server = http.createServer(app);
+const db = require("./models");
 
-const io = new Server(server,{
-    cors:{
-        origin:"http://localhost:3000",
-        methods:["GET","POST"],
-    },
+const postRouter = require("./routes/Posts");
+app.use("/posts",postRouter);
+
+const authRouter = require("./routes/Users");
+app.use("/Auth",authRouter);
+
+db.sequelize.sync().then(()=>
+{app.listen(3001,()=>{
+    console.log("Server running");
 });
-io.on("connection",(socket)=>{
-    console.log(`User Connected: ${socket.id}`);
-    socket.on("join_room",(data)=>{
-        socket.join(data);
-    })
-    socket.on("send_message",(data)=>{
-        socket.to(data.room).emit("receive_message", data);
-    })
-})
-server.listen(3001,()=>{
-    console.log("Starting server");
-    console.log("Server Started");
 });
