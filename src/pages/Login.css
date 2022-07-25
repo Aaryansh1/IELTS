@@ -1,0 +1,91 @@
+.login {
+    background-color: #c48474;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+height:96.5vh;
+  }
+.logosignin{
+    display: flex;
+    font:bold;
+}
+.logo {
+    object-fit: contain;
+    width: 5rem;
+    margin-top: 0.5rem;
+    margin-left: auto;
+  }
+
+.login__container {
+    width: 20em;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    border: 1px solid #A00A0A;
+    box-shadow: 1px 0px 3px 3px #9F0404;
+    padding: 20px;
+    background-color: white;
+color: #A00A0A;
+  }
+
+.login__container > h1 {
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+
+.login__container > form > h5 {
+    margin-bottom: 5px;
+}
+
+.login__container > form > input {
+    height: 30px;
+    margin-bottom: 10px;
+    background-color: #fcf1ee;
+    width: 98%;
+  }
+
+.login__container > p {
+    margin-top: 15px;
+    font-size: 12px;
+}
+
+.login__signInButton {
+    background: #9F0404;
+    border-radius: 2%;
+    width: 100%;
+    font-weight: 700;
+    font-size: 1rem;
+    border: 1px solid;
+    margin-top: 10px;
+    color:#EEE1E1;    
+    padding:0.3rem;
+border-radius: 2px;
+}   
+.login__signInButton:hover{
+  color:#9F0404;
+  background-color: #EEE1E1;
+  transition: 0.2s;
+}
+.login__registerButton {   
+  border-radius: 2%;
+  background: #A00A0A;
+  border-radius: 2px;
+  width: 99%;
+  font-weight: 700;
+  font-size: 1rem;
+  border: 1px solid;
+  margin-top: 10px;
+  color:#EEE1E1;    
+  padding:0.1rem;
+  text-align: center;
+}
+
+.login__registerButton:hover{
+  color:#9F0404;
+  background-color: #EEE1E1;
+  transition: 0.2s;
+}
+.toRegister{
+  text-decoration: none;
+}

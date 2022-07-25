@@ -1,0 +1,84 @@
+.Register {
+    background-color: #c48474;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+height:96.5vh;
+  }
+.logosignup{
+  display: flex;
+  font:bold;
+}
+.Register__container {
+    width: 25em;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    border: 1px solid #A00A0A;
+    box-shadow: 1px 0px 3px 3px #9F0404;
+    padding: 20px;
+    background-color: white;
+color: #A00A0A;
+  }
+
+.Register__container > h1 {
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+
+.Register__container > form > h5 {
+    margin-bottom: 5px;
+}
+
+.Register__container > form > input {
+    height: 30px;
+    margin-bottom: 10px;
+    background-color: #fcf1ee;
+    width: 98%;
+  }
+
+.Register__container > p {
+    margin-top: 15px;
+    font-size: 12px;
+}
+
+.Register__signInButton {
+    background: #9F0404;
+    border-radius: 2%;
+    width: 100%;
+    font-weight: 700;
+    font-size: 1rem;
+    border: 1px solid;
+    margin-top: 10px;
+    color:#EEE1E1;    
+    padding:0.3rem;
+border-radius: 2px;
+}   
+.Register__signInButton:hover{
+  color:#9F0404;
+  background-color: #EEE1E1;
+  transition: 0.2s;
+}
+.Register__loginbutton {   
+  border-radius: 2%;
+  background: #A00A0A;
+  border-radius: 2px;
+  width: 100%;
+  font-weight: 600;
+  font-size: 1rem;
+  border: 1px solid;
+  margin-top: 10px;
+  color:#EEE1E1;
+  text-align: center;    
+  padding:0.1rem;
+}
+.tologin{
+    text-decoration: none;
+}
+
+.Register__loginbutton:hover{
+  color:#9F0404;
+  background-color: #EEE1E1;
+  transition: 0.2s;
+}
